@@ -1,0 +1,3140 @@
+{
+
+  "cfn-yaml--start": {
+    "prefix": "cfn-yaml-start",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html",
+      "---
+      "AWSTemplateFormatVersion: \"2010-09-09\"",
+      "",
+      "Description: String",
+      "",
+      "Metadata:",
+      "  template metadata",
+      "",
+      "Parameters:",
+      "  set of parameters",
+      "",
+      "Mappings:",
+      "  set of mappings",
+      "",
+      "Conditions:",
+      "  set of conditions",
+      "",
+      "Transform:",
+      "  set of transforms",
+      "",
+      "Resources:",
+      "  set of resources",
+      "",
+      "Outputs:",
+      "  set of outputs",
+    ],
+    "description": "Cloudformation Template Shell"
+  },
+
+
+  "ApiGateway-Account": {
+    "prefix": "ApiGateway-Account",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html",
+      "Type: \"AWS::ApiGateway::Account\"",
+    "Properties: ",
+    "  CloudWatchRoleArn: String"
+    ],
+    "description": ""
+  },
+  "ApiGateway-ApiKey": {
+    "prefix": "ApiGateway-ApiKey",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html",
+      "Type: \"AWS::ApiGateway::ApiKey\"",
+    "Properties: ",
+    "  Description: String",
+    "  Enabled: Boolean",
+    "  Name: String",
+    "  StageKeys:",
+    "    - StageKey",
+    "    - ..."
+    ],
+    "description": ""
+  },
+  "ApiGateway-Authorizer": {
+    "prefix": "ApiGateway-Authorizer",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html",
+      "Type: \"AWS::ApiGateway::Authorizer\"",
+    "Properties:",
+    "  AuthorizerCredentials: String",
+    "  AuthorizerResultTtlInSeconds: Integer",
+    "  AuthorizerUri: String",
+    "  IdentitySource: String",
+    "  IdentityValidationExpression: String",
+    "  Name: String",
+    "  ProviderARNs:  - String",
+    "  RestApiId: String",
+    "  Type: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-BasePathMapping": {
+    "prefix": "ApiGateway-BasePathMapping",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html",
+      "Type: \"AWS::ApiGateway::BasePathMapping\"",
+    "Properties:",
+    "  BasePath: String",
+    "  DomainName: String",
+    "  RestApiId: String",
+    "  Stage: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-ClientCertificate": {
+    "prefix": "ApiGateway-ClientCertificate",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html",
+      "Type: \"AWS::ApiGateway::ClientCertificate\"",
+    "Properties:",
+    "  Description: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-Deployment": {
+    "prefix": "ApiGateway-Deployment",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html",
+      "Type: \"AWS::ApiGateway::Deployment\"",
+    "Properties:",
+    "  Description: String",
+    "  RestApiId: String",
+    "  StageDescription: StageDescription",
+    "  StageName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-Method": {
+    "prefix": "ApiGateway-Method",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html",
+      "Type: \"AWS::ApiGateway::Method\"",
+    "Properties:",
+    "  ApiKeyRequired: Boolean",
+    "  AuthorizationType: String",
+    "  AuthorizerId: String",
+    "  HttpMethod: String",
+    "  Integration: Integration",
+    "  MethodResponses:",
+    "    - MethodResponse",
+    "  RequestModels:",
+    "    String: String",
+    "  RequestParameters:",
+    "    String: Boolean",
+    "  ResourceId: String",
+    "  RestApiId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-Model": {
+    "prefix": "ApiGateway-Model",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html",
+      "Type: \"AWS::ApiGateway::Model\"",
+    "Properties:",
+    "  ContentType: String",
+    "  Description: String",
+    "  Name: String",
+    "  RestApiId: String",
+    "  Schema: JSON object",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-Resource": {
+    "prefix": "ApiGateway-Resource",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html",
+      "Type: \"AWS::ApiGateway::Resource\"",
+    "Properties:",
+    "  ParentId: String",
+    "  PathPart: String",
+    "  RestApiId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-RestApi": {
+    "prefix": "ApiGateway-RestApi",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html",
+      "Type: \"AWS::ApiGateway::RestApi\"",
+    "Properties:",
+    "  Body: JSON object",
+    "  BodyS3Location: S3Location",
+    "  CloneFrom: String",
+    "  Description: String",
+    "  FailOnWarnings: Boolean",
+    "  Name: String",
+    "  Parameters:",
+    "    - String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-Stage": {
+    "prefix": "ApiGateway-Stage",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html",
+      "Type: \"AWS::ApiGateway::Stage\"",
+    "Properties:",
+    "  CacheClusterEnabled: Boolean",
+    "  CacheClusterSize: String",
+    "  ClientCertificateId: String",
+    "  DeploymentId: String",
+    "  Description: String",
+    "  MethodSettings:",
+    "    - MethodSetting",
+    "  RestApiId: String",
+    "  StageName: String",
+    "  Variables:",
+    "    String: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApiGateway-UsagePlan": {
+    "prefix": "ApiGateway-UsagePlan",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html",
+      "Type: \"AWS::ApiGateway::UsagePlan\"",
+    "Properties:",
+    "  ApiStages: ",
+    "  - ApiStage",
+    "  Description: String",
+    "  Quota: QuotaSettings",
+    "  Throttle: ThrottleSettings",
+    "  UsagePlanName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApplicationAutoScaling-ScalableTarget": {
+    "prefix": "ApplicationAutoScaling-ScalableTarget",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html",
+      "Type: \"AWS::ApplicationAutoScaling::ScalableTarget\"",
+    "Properties:",
+    "  MaxCapacity: Integer",
+    "  MinCapacity: Integer",
+    "  ResourceId: String",
+    "  RoleARN: String",
+    "  ScalableDimension: String",
+    "  ServiceNamespace: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ApplicationAutoScaling-ScalingPolicy": {
+    "prefix": "ApplicationAutoScaling-ScalingPolicy",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html",
+      "Type\" : \"AWS::ApplicationAutoScaling::ScalingPolicy\"",
+    "Properties: ",
+    "  PolicyName: String",
+    "  PolicyType: String",
+    "  ResourceId: String",
+    "  ScalableDimension: String",
+    "  ScalingTargetId: String",
+    "  ServiceNamespace: String",
+    "  StepScalingPolicyConfiguration: StepScalingPolicyConfiguration",
+    ""
+    ],
+    "description": ""
+  },
+  "AutoScaling-AutoScalingGroup": {
+    "prefix": "AutoScaling-AutoScalingGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html",
+      "Type: \"AWS::AutoScaling::AutoScalingGroup\"",
+    "Properties:",
+    "  AvailabilityZones:",
+    "    - String",
+    "  Cooldown: String",
+    "  DesiredCapacity: String",
+    "  HealthCheckGracePeriod: Integer",
+    "  HealthCheckType: String",
+    "  InstanceId: String",
+    "  LaunchConfigurationName: String",
+    "  LoadBalancerNames:",
+    "    - String",
+    "  MaxSize: String",
+    "  MetricsCollection:",
+    "    - MetricsCollection",
+    "  MinSize: String",
+    "  NotificationConfigurations:",
+    "    - NotificationConfigurations",
+    "  PlacementGroup: String",
+    "  Tags:",
+    "    - Auto Scaling Tag",
+    "  TargetGroupARNs:",
+    "    - String",
+    "  TerminationPolicies:",
+    "    - String",
+    "  VPCZoneIdentifier:",
+    "    - String",
+    ""
+    ],
+    "description": ""
+  },
+  "AutoScaling-LaunchConfiguration": {
+    "prefix": "AutoScaling-LaunchConfiguration",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html",
+      "Type: \"AWS::AutoScaling::LaunchConfiguration\"",
+    "Properties:",
+    "  AssociatePublicIpAddress: Boolean",
+    "  BlockDeviceMappings:",
+    "    - BlockDeviceMapping",
+    "  ClassicLinkVPCId: String",
+    "  ClassicLinkVPCSecurityGroups:",
+    "    - String",
+    "  EbsOptimized: Boolean",
+    "  IamInstanceProfile: String",
+    "  ImageId: String",
+    "  InstanceId: String",
+    "  InstanceMonitoring: Boolean",
+    "  InstanceType: String",
+    "  KernelId: String",
+    "  KeyName: String",
+    "  PlacementTenancy: String",
+    "  RamDiskId: String",
+    "  SecurityGroups:",
+    "    - SecurityGroup",
+    "  SpotPrice: String",
+    "  UserData: String",
+    ""
+    ],
+    "description": ""
+  },
+  "AutoScaling-LifecycleHook": {
+    "prefix": "AutoScaling-LifecycleHook",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html",
+      "Type: \"AWS::AutoScaling::LifecycleHook\"",
+    "Properties:",
+    "  AutoScalingGroupName: String",
+    "  DefaultResult: String",
+    "  HeartbeatTimeout: Integer",
+    "  LifecycleTransition: String",
+    "  NotificationMetadata: String",
+    "  NotificationTargetARN: String",
+    "  RoleARN: String",
+    ""
+    ],
+    "description": ""
+  },
+  "AutoScaling-ScalingPolicy": {
+    "prefix": "AutoScaling-ScalingPolicy",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html",
+      "Type: \"AWS::AutoScaling::ScalingPolicy\"",
+    "Properties:",
+    "  AdjustmentType: String",
+    "  AutoScalingGroupName: String",
+    "  Cooldown: String",
+    "  EstimatedInstanceWarmup: Integer",
+    "  MetricAggregationType: String",
+    "  MinAdjustmentMagnitude: Integer",
+    "  PolicyType: String",
+    "  ScalingAdjustment: Integer",
+    "  StepAdjustments:",
+    "    - StepAdjustments",
+    ""
+    ],
+    "description": ""
+  },
+  "AutoScaling-ScheduledAction": {
+    "prefix": "AutoScaling-ScheduledAction",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html",
+      "Type: AWS::AutoScaling::ScheduledAction",
+    "Properties:",
+    "  AutoScalingGroupName: String",
+    "  DesiredCapacity: Integer",
+    "  EndTime: Time stamp",
+    "  MaxSize: Integer",
+    "  MinSize: Integer",
+    "  Recurrence: String",
+    "  StartTime: Time stamp",
+    ""
+    ],
+    "description": ""
+  },
+  "CertificateManager-Certificate": {
+    "prefix": "CertificateManager-Certificate",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html",
+      "Type: \"AWS::CertificateManager::Certificate\"",
+    "Properties: ",
+    "  DomainName: String",
+    "  DomainValidationOptions:",
+    "    - DomainValidationOptions",
+    "  SubjectAlternativeNames:",
+    "    - String",
+    "  Tags:",
+    "    - Resource Tag"
+    ],
+    "description": ""
+  },
+  "CloudFormation-Authentication": {
+    "prefix": "CloudFormation-Authentication",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-authentication.html",
+      "Type: \"AWS::CloudFormation::Authentication\"",
+    "String:",
+    "  accessKeyId: String",
+    "  buckets:",
+    "    - String",
+    "  password: String",
+    "  secretKey: String",
+    "  type: String",
+    "  uris:",
+    "    - String",
+    "  username: String",
+    "  roleName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "CloudFormation-CustomResource": {
+    "prefix": "CloudFormation-CustomResource",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html",
+      "Type: \"Custom::String\"",
+    "Version: \"1.0\"",
+    "Properties:",
+    "  ServiceToken: String",
+    "    ... provider-defined properties ...",
+    ""
+    ],
+    "description": ""
+  },
+  "CloudFormation-Init": {
+    "prefix": "CloudFormation-Init",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html",
+      "Resources: ",
+    "  MyInstance: ",
+    "    Type: \"AWS::EC2::Instance\"",
+    "    Metadata: ",
+    "      AWS::CloudFormation::Init: ",
+    "        config: ",
+    "          packages: ",
+    "            :",
+    "          groups: ",
+    "            :",
+    "          users: ",
+    "            :",
+    "          sources: ",
+    "            :",
+    "          files: ",
+    "            :",
+    "          commands: ",
+    "            :",
+    "          services: ",
+    "            :",
+    "    Properties: ",
+    "      :"
+    ],
+    "description": ""
+  },
+  "CloudFormation-Interface": {
+    "prefix": "CloudFormation-Interface",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-interface.html",
+      "Metadata:",
+    "  AWS::CloudFormation::Interface:",
+    "    ParameterGroups:",
+    "      - ParameterGroup",
+    "    ParameterLabels:",
+    "      ParameterLabel",
+    ""
+    ],
+    "description": ""
+  },
+  "CloudFormation-Stack": {
+    "prefix": "CloudFormation-Stack",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html",
+      "Type: \"AWS::CloudFormation::Stack\"",
+    "Properties:",
+    "  NotificationARNs:",
+    "    - String",
+    "  Parameters:",
+    "    CloudFormation Stack Parameters Property Type",
+    "  Tags:",
+    "    - Resource Tag",
+    "  TemplateURL: String",
+    "  TimeoutInMinutes: Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "CloudFormation-WaitCondition": {
+    "prefix": "CloudFormation-WaitCondition",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html",
+      "Type: \"AWS::CloudFormation::WaitCondition\"",
+    "Properties: ",
+    "  Count: Integer",
+    "  Handle: String",
+    "  Timeout: String",
+    ""
+    ],
+    "description": ""
+  },
+  "CloudFormation-WaitConditionHandle": {
+    "prefix": "CloudFormation-WaitConditionHandle",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html",
+      "Type: \"AWS::CloudFormation::WaitConditionHandle\"",
+    "Properties:"
+    ],
+    "description": ""
+  },
+  "CloudFront-Distribution": {
+    "prefix": "CloudFront-Distribution",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution.html",
+      "Type: \"AWS::CloudFront::Distribution\"",
+    "Properties:",
+    "  DistributionConfig:",
+    "    DistributionConfig",
+    ""
+    ],
+    "description": ""
+  },
+  "CloudTrail-Trail": {
+    "prefix": "CloudTrail-Trail",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html",
+      "Type: \"AWS::CloudTrail::Trail\"",
+    "Properties:",
+    "  CloudWatchLogsLogGroupArn: String",
+    "  CloudWatchLogsRoleArn: String",
+    "  EnableLogFileValidation: Boolean",
+    "  IncludeGlobalServiceEvents: Boolean",
+    "  IsLogging: Boolean",
+    "  IsMultiRegionTrail: Boolean",
+    "  KMSKeyId: String",
+    "  S3BucketName: String",
+    "  S3KeyPrefix: String",
+    "  SnsTopicName: String",
+    "  Tags:",
+    "    - Resource Tag",
+    ""
+    ],
+    "description": ""
+  },
+  "CloudWatch-Alarm": {
+    "prefix": "CloudWatch-Alarm",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html",
+      "Type: \"AWS::CloudWatch::Alarm\"",
+    "Properties:",
+    "  ActionsEnabled: Boolean",
+    "  AlarmActions:",
+    "    - String",
+    "  AlarmDescription: String",
+    "  AlarmName: String",
+    "  ComparisonOperator: String",
+    "  Dimensions:",
+    "    - Metric dimension",
+    "  EvaluationPeriods: Integer",
+    "  InsufficientDataActions:",
+    "    - String",
+    "  MetricName: String",
+    "  Namespace: String",
+    "  OKActions:",
+    "    - String",
+    "  Period: Integer",
+    "  Statistic: String",
+    "  Threshold: Double",
+    "  Unit: String",
+    ""
+    ],
+    "description": ""
+  },
+  "CodeBuild-Project": {
+    "prefix": "CodeBuild-Project",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html",
+      "Type: \"AWS::CodeBuild::Project\"",
+    "Properties: ",
+    "  Artifacts:",
+    "    Artifacts",
+    "  Description: String",
+    "  EncryptionKey: String",
+    "  Environment:",
+    "    Environment",
+    "  Name: String",
+    "  ServiceRole: String",
+    "  Source:",
+    "    Source",
+    "  Tags:",
+    "    - Resource Tag",
+    "  TimeoutInMinutes: Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "CodeCommit-Repository": {
+    "prefix": "CodeCommit-Repository",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html",
+      "Type: \"AWS::CodeCommit::Repository\"",
+    "Properties: ",
+    "  RepositoryDescription: String",
+    "  RepositoryName: String",
+    "  Triggers:",
+    "  - Trigger"
+    ],
+    "description": ""
+  },
+  "CodeDeploy-Application": {
+    "prefix": "CodeDeploy-Application",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html",
+      "Type: \"AWS::CodeDeploy::Application\"",
+    "Properties:",
+    "  ApplicationName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "CodeDeploy-DeploymentConfig": {
+    "prefix": "CodeDeploy-DeploymentConfig",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html",
+      "Type: \"AWS::CodeDeploy::DeploymentConfig\"",
+    "Properties:",
+    "  DeploymentConfigName: String",
+    "  MinimumHealthyHosts:",
+    "    MinimumHealthyHosts",
+    ""
+    ],
+    "description": ""
+  },
+  "CodeDeploy-DeploymentGroup": {
+    "prefix": "CodeDeploy-DeploymentGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html",
+      "Type: \"AWS::CodeDeploy::DeploymentGroup\"",
+    "Properties:",
+    "  ApplicationName: String",
+    "  AutoScalingGroups:",
+    "    - String",
+    "  Deployment:",
+    "    Deployment",
+    "  DeploymentConfigName: String",
+    "  DeploymentGroupName: String",
+    "  Ec2TagFilters:",
+    "    - Ec2TagFilters",
+    "  OnPremisesInstanceTagFilters:",
+    "    - OnPremisesInstanceTagFilters",
+    "  ServiceRoleArn: String",
+    ""
+    ],
+    "description": ""
+  },
+  "CodePipeline-CustomActionType": {
+    "prefix": "CodePipeline-CustomActionType",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html",
+      "Type: \"AWS::CodePipeline::CustomActionType\"",
+    "Properties:",
+    "  Category: String,",
+    "  ConfigurationProperties:",
+    "    - ConfigurationProperties",
+    "  InputArtifactDetails:",
+    "    ArtifactDetails",
+    "  OutputArtifactDetails:",
+    "    ArtifactDetails",
+    "  Provider: String",
+    "  Settings:",
+    "    Settings",
+    "  Version: String",
+    ""
+    ],
+    "description": ""
+  },
+  "CodePipeline-Pipeline": {
+    "prefix": "CodePipeline-Pipeline",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html",
+      "Type: \"AWS::CodePipeline::Pipeline\"",
+    "Properties:",
+    "  ArtifactStore:",
+    "    ArtifactStore",
+    "  DisableInboundStageTransitions:",
+    "    - DisableInboundStageTransitions",
+    "  Name: String",
+    "  RestartExecutionOnUpdate: Boolean",
+    "  RoleArn: String",
+    "  Stages:",
+    "    - Stages",
+    ""
+    ],
+    "description": ""
+  },
+  "Config-ConfigRule": {
+    "prefix": "Config-ConfigRule",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html",
+      "Type: \"AWS::Config::ConfigRule\"",
+    "Properties:",
+    "  ConfigRuleName: String",
+    "  Description: String",
+    "  InputParameters:",
+    "    ParameterName : Value",
+    "  MaximumExecutionFrequency: String",
+    "  Scope:",
+    "    Scope",
+    "  Source:",
+    "    Source",
+    ""
+    ],
+    "description": ""
+  },
+  "Config-ConfigurationRecorder": {
+    "prefix": "Config-ConfigurationRecorder",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html",
+      "Type: \"AWS::Config::ConfigurationRecorder\"",
+    "Properties:",
+    "  Name: String",
+    "  RecordingGroup:",
+    "    Recording group",
+    "  RoleARN: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Config-DeliveryChannel": {
+    "prefix": "Config-DeliveryChannel",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html",
+      "Type: \"AWS::Config::DeliveryChannel\"",
+    "Properties:",
+    "  ConfigSnapshotDeliveryProperties:",
+    "    Config snapshot delivery properties",
+    "  Name: String",
+    "  S3BucketName: String",
+    "  S3KeyPrefix: String",
+    "  SnsTopicARN: String",
+    ""
+    ],
+    "description": ""
+  },
+  "DataPipeline-Pipeline": {
+    "prefix": "DataPipeline-Pipeline",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html",
+      "Type: \"AWS::DataPipeline::Pipeline\"",
+    "Properties:",
+    "  Activate: Boolean",
+    "  Description: String",
+    "  Name: String",
+    "  ParameterObjects:",
+    "    - Parameter object",
+    "  ParameterValues:",
+    "    - Parameter value",
+    "  PipelineObjects:",
+    "    - Pipeline object",
+    "  PipelineTags:",
+    "    - Pipeline tag",
+    ""
+    ],
+    "description": ""
+  },
+  "DirectoryService-MicrosoftAD": {
+    "prefix": "DirectoryService-MicrosoftAD",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html",
+      "Type: \"AWS::DirectoryService::MicrosoftAD\"",
+    "Properties:",
+    "  CreateAlias: Boolean",
+    "  EnableSso: Boolean",
+    "  Name: String",
+    "  Password: String",
+    "  ShortName: String",
+    "  VpcSettings:",
+    "    VpcSettings",
+    ""
+    ],
+    "description": ""
+  },
+  "DirectoryService-SimpleAD": {
+    "prefix": "DirectoryService-SimpleAD",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html",
+      "Type: \"AWS::DirectoryService::SimpleAD\"",
+    "Properties:",
+    "  CreateAlias: Boolean",
+    "  Description: String",
+    "  EnableSso: Boolean",
+    "  Name: String",
+    "  Password: String",
+    "  ShortName: String",
+    "  Size: String",
+    "  VpcSettings:",
+    "    VpcSettings",
+    ""
+    ],
+    "description": ""
+  },
+  "DynamoDB-Table": {
+    "prefix": "DynamoDB-Table",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html",
+      "Type: \"AWS::DynamoDB::Table\"",
+    "Properties:",
+    "  AttributeDefinitions:",
+    "    - AttributeDefinitions",
+    "  GlobalSecondaryIndexes:",
+    "    - GlobalSecondaryIndexes",
+    "  KeySchema:",
+    "    - KeySchema",
+    "  LocalSecondaryIndexes:",
+    "    - LocalSecondaryIndexes",
+    "  ProvisionedThroughput:",
+    "    ProvisionedThroughput",
+    "  StreamSpecification:",
+    "    StreamSpecification",
+    "  TableName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-CustomerGateway": {
+    "prefix": "EC2-CustomerGateway",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html",
+      "Type: \"AWS::EC2::CustomerGateway\"",
+    "Properties:",
+    "  BgpAsn: Number",
+    "  IpAddress: String",
+    "  Tags:",
+    "    Resource Tag",
+    "  Type: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-DHCPOptions": {
+    "prefix": "EC2-DHCPOptions",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html",
+      "Type: \"AWS::EC2::DHCPOptions\"",
+    "Properties:",
+    "  DomainName: String",
+    "  DomainNameServers:",
+    "    - String",
+    "  NetbiosNameServers:",
+    "    - String",
+    "  NetbiosNodeType: Number",
+    "  NtpServers:",
+    "    - String",
+    "  Tags:",
+    "    -Resource Tag",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-EIP": {
+    "prefix": "EC2-EIP",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html",
+      "Type: \"AWS::EC2::EIP\"",
+    "Properties:",
+    "  InstanceId: String",
+    "  Domain: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-EIPAssociation": {
+    "prefix": "EC2-EIPAssociation",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html",
+      "Type: \"AWS::EC2::EIPAssociation\"",
+    "Properties:",
+    "  AllocationId: String",
+    "  EIP: String",
+    "  InstanceId: String",
+    "  NetworkInterfaceId: String",
+    "  PrivateIpAddress: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-FlowLog": {
+    "prefix": "EC2-FlowLog",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html",
+      "Type: \"AWS::EC2::FlowLog\"",
+    "Properties:",
+    "  DeliverLogsPermissionArn\" : String,",
+    "  LogGroupName\" : String,",
+    "  ResourceId\" : String,",
+    "  ResourceType\" : String,",
+    "  TrafficType\" : String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-Host": {
+    "prefix": "EC2-Host",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html",
+      "Type: \"AWS::EC2::Host\"",
+    "Properties: ",
+    "  AutoPlacement: String",
+    "  AvailabilityZone: String",
+    "  InstanceType: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-Instance": {
+    "prefix": "EC2-Instance",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html",
+      "Type: \"AWS::EC2::Instance\"",
+    "Properties: ",
+    "  Affinity: String",
+    "  AvailabilityZone: String",
+    "  BlockDeviceMappings: ",
+    "    - EC2 Block Device Mapping",
+    "  DisableApiTermination: Boolean",
+    "  EbsOptimized: Boolean",
+    "  HostId: String",
+    "  IamInstanceProfile: String",
+    "  ImageId: String",
+    "  InstanceInitiatedShutdownBehavior: String",
+    "  InstanceType: String",
+    "  Ipv6AddressCount: Integer",
+    "  Ipv6Addresses:",
+    "    - IPv6 Address Type",
+    "  KernelId: String",
+    "  KeyName: String",
+    "  Monitoring: Boolean",
+    "  NetworkInterfaces: ",
+    "    - EC2 Network Interface\"",
+    "  PlacementGroupName: String",
+    "  PrivateIpAddress: String",
+    "  RamdiskId: String",
+    "  SecurityGroupIds: ",
+    "    - String",
+    "  SecurityGroups: ",
+    "    - String",
+    "  SourceDestCheck: Boolean",
+    "  SsmAssociations: ",
+    "    - SSMAssociation",
+    "  SubnetId: String",
+    "  Tags: ",
+    "    - Resource Tag",
+    "  Tenancy: String",
+    "  UserData: String",
+    "  Volumes: ",
+    "    - EC2 MountPoint",
+    "  AdditionalInfo: String"
+    ],
+    "description": ""
+  },
+  "EC2-InternetGateway": {
+    "prefix": "EC2-InternetGateway",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internet-gateway.html",
+      "Type: \"AWS::EC2::InternetGateway\"",
+    "Properties: ",
+    "  Tags:",
+    "    - Resource Tag",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-NatGateway": {
+    "prefix": "EC2-NatGateway",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html",
+      "Type: \"AWS::EC2::NatGateway\"",
+    "Properties: ",
+    "  AllocationId: String",
+    "  SubnetId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-NetworkAcl": {
+    "prefix": "EC2-NetworkAcl",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html",
+      "Type: \"AWS::EC2::NetworkAcl\"",
+    "Properties:",
+    "  Tags:",
+    "    - Resource Tag",
+    "  VpcId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-NetworkAclEntry": {
+    "prefix": "EC2-NetworkAclEntry",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html",
+      "Type: \"AWS::EC2::NetworkAclEntry\"",
+    "Properties: ",
+    "  CidrBlock: String",
+    "  Egress: Boolean",
+    "  Icmp:",
+    "    EC2 ICMP",
+    "  Ipv6CidrBlock: String ",
+    "  NetworkAclId: String",
+    "  PortRange:",
+    "    EC2 PortRange",
+    "  Protocol: Integer",
+    "  RuleAction : String",
+    "  RuleNumber : Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-NetworkInterface": {
+    "prefix": "EC2-NetworkInterface",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html",
+      "Type: \"AWS::EC2::NetworkInterface\"",
+    "Properties: ",
+    "  Description: String",
+    "  GroupSet:",
+    "    - String",
+    "  Ipv6AddressCount: Integer",
+    "  Ipv6Addresses:",
+    "    - Ipv6Address",
+    "  PrivateIpAddress: String",
+    "  PrivateIpAddresses:",
+    "    - PrivateIpAddressSpecification",
+    "  SecondaryPrivateIpAddressCount: Integer",
+    "  SourceDestCheck: Boolean",
+    "  SubnetId: String",
+    "  Tags:",
+    "    - Resource Tag",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-NetworkInterfaceAttachment": {
+    "prefix": "EC2-NetworkInterfaceAttachment",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html",
+      "Type: \"AWS::EC2::NetworkInterfaceAttachment\"",
+    "Properties: ",
+    "  DeleteOnTermination: Boolean",
+    "  DeviceIndex: String",
+    "  InstanceId: String",
+    "  NetworkInterfaceId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-PlacementGroup": {
+    "prefix": "EC2-PlacementGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html",
+      "Type: \"AWS::EC2::PlacementGroup\"",
+    "Properties: ",
+    "  Strategy: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-Route": {
+    "prefix": "EC2-Route",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html",
+      "Type: \"AWS::EC2::Route\"",
+    "Properties: ",
+    "  DestinationCidrBlock: String",
+    "  DestinationIpv6CidrBlock: String",
+    "  GatewayId: String",
+    "  InstanceId: String",
+    "  NatGatewayId: String",
+    "  NetworkInterfaceId: String",
+    "  RouteTableId: String",
+    "  VpcPeeringConnectionId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-RouteTable": {
+    "prefix": "EC2-RouteTable",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html",
+      "Type: \"AWS::EC2::RouteTable\"",
+    "Properties: ",
+    "  VpcId: String",
+    "  Tags:",
+    "    - Resource Tag",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-SecurityGroup": {
+    "prefix": "EC2-SecurityGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html",
+      "Type: \"AWS::EC2::SecurityGroup\"",
+    "Properties: ",
+    "  GroupDescription: String",
+    "  SecurityGroupEgress:",
+    "    - Security Group Rule",
+    "  SecurityGroupIngress:",
+    "    - Security Group Rule",
+    "  Tags:",
+    "    - Resource Tag",
+    "  VpcId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-SecurityGroupEgress": {
+    "prefix": "EC2-SecurityGroupEgress",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html",
+      "Type: \"AWS::EC2::SecurityGroupEgress\"",
+    "Properties:",
+    "  CidrIp: String",
+    "  CidrIpv6: String",
+    "  DestinationPrefixListId: String",
+    "  DestinationSecurityGroupId:  String",
+    "  FromPort: Integer",
+    "  GroupId: String",
+    "  IpProtocol: String",
+    "  ToPort: Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-SecurityGroupIngress": {
+    "prefix": "EC2-SecurityGroupIngress",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html",
+      "Type: \"AWS::EC2::SecurityGroupIngress\"",
+    "Properties: ",
+    "  CidrIp: String",
+    "  CidrIpv6: String",
+    "  FromPort: Integer",
+    "  GroupId: String",
+    "  GroupName: String",
+    "  IpProtocol: String",
+    "  SourceSecurityGroupName: String",
+    "  SourceSecurityGroupId: String",
+    "  SourceSecurityGroupOwnerId: String",
+    "  ToPort: Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-SpotFleet": {
+    "prefix": "EC2-SpotFleet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html",
+      "Type: \"AWS::EC2::SpotFleet\"",
+    "Properties: ",
+    "  SpotFleetRequestConfigData:",
+    "    SpotFleetRequestConfigData",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-Subnet": {
+    "prefix": "EC2-Subnet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html",
+      "Type: \"AWS::EC2::Subnet\"",
+    "Properties: ",
+    "  AvailabilityZone: String",
+    "  CidrBlock: String",
+    "  MapPublicIpOnLaunch: Boolean",
+    "  Tags:",
+    "    Resource Tag",
+    "  VpcId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-SubnetCidrBlock": {
+    "prefix": "EC2-SubnetCidrBlock",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html",
+      "Type: \"AWS::EC2::SubnetCidrBlock\"",
+    "Properties: ",
+    "  Ipv6CidrBlock: String",
+    "  SubnetId: String"
+    ],
+    "description": ""
+  },
+  "EC2-SubnetNetworkAclAssociation": {
+    "prefix": "EC2-SubnetNetworkAclAssociation",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html",
+      "Type: \"AWS::EC2::SubnetNetworkAclAssociation\"",
+    "Properties:",
+    "  SubnetId: String",
+    "  NetworkAclId: String ",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-SubnetRouteTableAssociation": {
+    "prefix": "EC2-SubnetRouteTableAssociation",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html",
+      "Type: \"AWS::EC2::SubnetRouteTableAssociation\"",
+    "Properties: ",
+    "  RouteTableId: String",
+    "  SubnetId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-Volume": {
+    "prefix": "EC2-Volume",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html",
+      "Type: \"AWS::EC2::Volume\"",
+    "Properties:",
+    "  AutoEnableIO: Boolean",
+    "  AvailabilityZone: String",
+    "  Encrypted: Boolean",
+    "  Iops: Number",
+    "  KmsKeyId: String",
+    "  Size: Integer",
+    "  SnapshotId: String",
+    "  Tags:",
+    "    - Resource Tag",
+    "  VolumeType: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VolumeAttachment": {
+    "prefix": "EC2-VolumeAttachment",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html",
+      "Type: AWS::EC2::VolumeAttachment",
+    "Properties:",
+    "  Device: String",
+    "  InstanceId: String",
+    "  VolumeId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPC": {
+    "prefix": "EC2-VPC",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html",
+      "Type: \"AWS::EC2::VPC\"",
+    "Properties: ",
+    "  CidrBlock: String",
+    "  EnableDnsSupport: Boolean",
+    "  EnableDnsHostnames: Boolean",
+    "  InstanceTenancy: String",
+    "  Tags:",
+    "    - Resource Tag ",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPCCidrBlock": {
+    "prefix": "EC2-VPCCidrBlock",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html",
+      "Type: \"AWS::EC2::VPCCidrBlock\"",
+    "Properties: ",
+    "  AmazonProvidedIpv6CidrBlock: Boolean",
+    "  VpcId: String"
+    ],
+    "description": ""
+  },
+  "EC2-VPCDHCPOptionsAssociation": {
+    "prefix": "EC2-VPCDHCPOptionsAssociation",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html",
+      "Type: \"AWS::EC2::VPCDHCPOptionsAssociation\"",
+    "Properties: ",
+    "  DhcpOptionsId: String",
+    "  VpcId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPCEndpoint": {
+    "prefix": "EC2-VPCEndpoint",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html",
+      "Type: \"AWS::EC2::VPCEndpoint\"",
+    "Properties: ",
+    "  PolicyDocument: JSON object",
+    "  RouteTableIds:",
+    "    - String",
+    "  ServiceName: String",
+    "  VpcId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPCGatewayAttachment": {
+    "prefix": "EC2-VPCGatewayAttachment",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html",
+      "Type: \"AWS::EC2::VPCGatewayAttachment\"",
+    "Properties: ",
+    "  InternetGatewayId: String",
+    "  VpcId: String",
+    "  VpnGatewayId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPCPeeringConnection": {
+    "prefix": "EC2-VPCPeeringConnection",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html",
+      "Type: \"AWS::EC2::VPCPeeringConnection\"",
+    "Properties: ",
+    "  PeerVpcId: String",
+    "  Tags:",
+    "    - Resource Tag",
+    "  VpcId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPNConnection": {
+    "prefix": "EC2-VPNConnection",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html",
+      "Type: \"AWS::EC2::VPNConnection\"",
+    "Properties: ",
+    "  Type: String",
+    "  CustomerGatewayId:",
+    "    GatewayID",
+    "  StaticRoutesOnly: Boolean",
+    "  Tags:",
+    "    - Resource Tag",
+    "  VpnGatewayId:",
+    "    GatewayID",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPNConnectionRoute": {
+    "prefix": "EC2-VPNConnectionRoute",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html",
+      "Type: \"AWS::EC2::VPNConnectionRoute\"",
+    "Properties: ",
+    "  DestinationCidrBlock: String",
+    "  VpnConnectionId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPNGateway": {
+    "prefix": "EC2-VPNGateway",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html",
+      "Type: \"AWS::EC2::VPNGateway\"",
+    "Properties: ",
+    "  Type: String",
+    "  Tags:",
+    "    Resource Tag ",
+    ""
+    ],
+    "description": ""
+  },
+  "EC2-VPNGatewayRoutePropagation": {
+    "prefix": "EC2-VPNGatewayRoutePropagation",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html",
+      "Type: \"AWS::EC2::VPNGatewayRoutePropagation\"",
+    "Properties: ",
+    "  RouteTableIds:",
+    "    - String",
+    "  VpnGatewayId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ECR-Repository": {
+    "prefix": "ECR-Repository",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html",
+      "Type: \"AWS::ECR::Repository\"",
+    "Properties: ",
+    "  RepositoryName: String",
+    "  RepositoryPolicyText: JSON object",
+    ""
+    ],
+    "description": ""
+  },
+  "ECS-Cluster": {
+    "prefix": "ECS-Cluster",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html",
+      "Type: \"AWS::ECS::Cluster\"",
+    "Properties:",
+    "  ClusterName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ECS-Service": {
+    "prefix": "ECS-Service",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html",
+      "Type: \"AWS::ECS::Service\"",
+    "Properties: ",
+    "  Cluster: String",
+    "  DeploymentConfiguration:",
+    "    DeploymentConfiguration",
+    "  DesiredCount: Integer",
+    "  LoadBalancers:",
+    "    - Load Balancer Objects, ...",
+    "  Role: String",
+    "  TaskDefinition: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ECS-TaskDefinition": {
+    "prefix": "ECS-TaskDefinition",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html",
+      "Type: \"AWS::ECS::TaskDefinition\"",
+    "Properties: ",
+    "  ContainerDefinitions:",
+    "    - Container Definition",
+    "  Family: String",
+    "  NetworkMode: String",
+    "  TaskRoleArn: String",
+    "  Volumes:",
+    "    - Volume Definition ",
+    ""
+    ],
+    "description": ""
+  },
+  "EFS-FileSystem": {
+    "prefix": "EFS-FileSystem",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html",
+      "Type: \"AWS::EFS::FileSystem\"",
+    "Properties: ",
+    "  FileSystemTags:",
+    "    - FileSystemTags",
+    "  PerformanceMode: String",
+    ""
+    ],
+    "description": ""
+  },
+  "EFS-MountTarget": {
+    "prefix": "EFS-MountTarget",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html",
+      "Type: \"AWS::EFS::MountTarget\"",
+    "Properties:",
+    "  FileSystemId: String",
+    "  IpAddress: String",
+    "  SecurityGroups:",
+    "    [ String, ... ]",
+    "  SubnetId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ElastiCache-CacheCluster": {
+    "prefix": "ElastiCache-CacheCluster",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html",
+      "Type: \"AWS::ElastiCache::CacheCluster\"",
+    "Properties:",
+    "  AutoMinorVersionUpgrade: Boolean",
+    "  AZMode: String",
+    "  CacheNodeType: String",
+    "  CacheParameterGroupName: String",
+    "  CacheSecurityGroupNames:",
+    "    - String",
+    "  CacheSubnetGroupName: String",
+    "  ClusterName: String",
+    "  Engine: String",
+    "  EngineVersion: String",
+    "  NotificationTopicArn: String",
+    "  NumCacheNodes: Integer",
+    "  Port: Integer",
+    "  PreferredAvailabilityZone: String",
+    "  PreferredAvailabilityZones:",
+    "    - String",
+    "  PreferredMaintenanceWindow: String",
+    "  SnapshotArns:",
+    "    - String",
+    "  SnapshotName: String",
+    "  SnapshotRetentionLimit: Integer",
+    "  SnapshotWindow: String",
+    "  Tags:",
+    "    - Resource Tag",
+    "  VpcSecurityGroupIds:",
+    "    - String",
+    ""
+    ],
+    "description": ""
+  },
+  "ElastiCache-ParameterGroup": {
+    "prefix": "ElastiCache-ParameterGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html",
+      "Type: \"AWS::ElastiCache::ParameterGroup\"",
+    "Properties: ",
+    "  CacheParameterGroupFamily: String",
+    "  Description: String",
+    "  Properties:",
+    "    String: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ElastiCache-ReplicationGroup": {
+    "prefix": "ElastiCache-ReplicationGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html",
+      "Type: \"AWS::ElastiCache::ReplicationGroup\"",
+    "Properties: ",
+    "  AutomaticFailoverEnabled: Boolean",
+    "  AutoMinorVersionUpgrade: Boolean",
+    "  CacheNodeType: String",
+    "  CacheParameterGroupName: String",
+    "  CacheSecurityGroupNames:",
+    "    - String",
+    "  CacheSubnetGroupName: String",
+    "  Engine: String",
+    "  EngineVersion: String",
+    "  NodeGroupConfiguration:",
+    "    - NodeGroupConfiguration",
+    "  NotificationTopicArn: String",
+    "  NumCacheClusters: Integer",
+    "  NumNodeGroups: Integer",
+    "  Port: Integer",
+    "  PreferredCacheClusterAZs:",
+    "    - String",
+    "  PreferredMaintenanceWindow: String",
+    "  PrimaryClusterId: String",
+    "  ReplicasPerNodeGroup: Integer",
+    "  ReplicationGroupDescription: String",
+    "  ReplicationGroupId: String",
+    "  SecurityGroupIds:",
+    "    - String",
+    "  SnapshotArns:",
+    "    - String",
+    "  SnapshotName: String",
+    "  SnapshotRetentionLimit: Integer",
+    "  SnapshottingClusterId: String",
+    "  SnapshotWindow: String",
+    "  Tags",
+    "    - Resource Tag"
+    ],
+    "description": ""
+  },
+  "ElastiCache-SecurityGroup": {
+    "prefix": "ElastiCache-SecurityGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group.html",
+      "Type: \"AWS::ElastiCache::SecurityGroup\"",
+    "Properties:",
+    "  Description: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ElastiCache-SecurityGroupIngress": {
+    "prefix": "ElastiCache-SecurityGroupIngress",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html",
+      "Type: \"AWS::ElastiCache::SecurityGroupIngress\"",
+    "Properties:",
+    "  CacheSecurityGroupName: String",
+    "  EC2SecurityGroupName: String",
+    "  EC2SecurityGroupOwnerId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ElastiCache-SubnetGroup ": {
+    "prefix": "ElastiCache-SubnetGroup ",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html",
+      "Type: \"AWS::ElastiCache::SubnetGroup\"",
+    "Properties:",
+    "  CacheSubnetGroupName: String",
+    "  Description: String",
+    "  SubnetIds:",
+    "    - String ",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticBeanstalk-Application": {
+    "prefix": "ElasticBeanstalk-Application",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html",
+      "Type: \"AWS::ElasticBeanstalk::Application\"",
+    "Properties:",
+    "  ApplicationName: String",
+    "  Description: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticBeanstalk-ApplicationVersion": {
+    "prefix": "ElasticBeanstalk-ApplicationVersion",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html",
+      "Type: AWS::ElasticBeanstalk::ApplicationVersion",
+    "Properties:",
+    "  ApplicationName: String",
+    "  Description: String",
+    "  SourceBundle:",
+    "    SourceBundle",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticBeanstalk-ConfigurationTemplate": {
+    "prefix": "ElasticBeanstalk-ConfigurationTemplate",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html",
+      "Type: \"AWS::ElasticBeanstalk::ConfigurationTemplate\"",
+    "Properties:",
+    "  ApplicationName: String",
+    "  Description: String",
+    "  EnvironmentId: String",
+    "  OptionSettings:",
+    "    - OptionSetting",
+    "  SolutionStackName: String",
+    "  SourceConfiguration:",
+    "    Source configuration",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticBeanstalk-Environment": {
+    "prefix": "ElasticBeanstalk-Environment",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html",
+      "Type: \"AWS::ElasticBeanstalk::Environment\"",
+    "Properties:",
+    "  ApplicationName: String",
+    "  CNAMEPrefix: String",
+    "  Description: String",
+    "  EnvironmentName: String",
+    "  OptionSettings: ",
+    "    - OptionSettings",
+    "  SolutionStackName: String",
+    "  Tags:",
+    "    - Resource Tag, ...",
+    "  TemplateName: String",
+    "  Tier:",
+    "    Environment Tier",
+    "  VersionLabel: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticLoadBalancing-LoadBalancer": {
+    "prefix": "ElasticLoadBalancing-LoadBalancer",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html",
+      "Type: \"AWS::ElasticLoadBalancing::LoadBalancer\"",
+    "Properties:",
+    "  AccessLoggingPolicy:",
+    "    AccessLoggingPolicy",
+    "  AppCookieStickinessPolicy:",
+    "    - AppCookieStickinessPolicy",
+    "  AvailabilityZones:",
+    "    - String",
+    "  ConnectionDrainingPolicy:",
+    "    ConnectionDrainingPolicy",
+    "  ConnectionSettings:",
+    "    ConnectionSettings",
+    "  CrossZone: Boolean",
+    "  HealthCheck:",
+    "    HealthCheck",
+    "  Instances:",
+    "    - String",
+    "  LBCookieStickinessPolicy:",
+    "    - LBCookieStickinessPolicy",
+    "  LoadBalancerName: String",
+    "  Listeners:",
+    "    - Listener",
+    "  Policies:",
+    "    - ElasticLoadBalancing Policy",
+    "  Scheme: String,",
+    "  SecurityGroups:",
+    "    Security Group",
+    "  Subnets:",
+    "    - String",
+    "  Tags",
+    "    - Resource Tag",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticLoadBalancingV2-Listener": {
+    "prefix": "ElasticLoadBalancingV2-Listener",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html",
+      "Type: \"AWS::ElasticLoadBalancingV2::Listener\"",
+    "Properties: ",
+    "  Certificates:",
+    "    - Certificates",
+    "  DefaultActions:",
+    "    - DefaultActions",
+    "  LoadBalancerArn: String",
+    "  Port: Integer",
+    "  Protocol: String",
+    "  SslPolicy: String",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticLoadBalancingV2-ListenerRule": {
+    "prefix": "ElasticLoadBalancingV2-ListenerRule",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html",
+      "Type: \"AWS::ElasticLoadBalancingV2::ListenerRule\"",
+    "Properties:",
+    "  Actions:",
+    "    - Actions",
+    "  Conditions:",
+    "    - Conditions",
+    "  ListenerArn: String",
+    "  Priority: Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticLoadBalancingV2-LoadBalancer": {
+    "prefix": "ElasticLoadBalancingV2-LoadBalancer",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html",
+      "Type: \"AWS::ElasticLoadBalancingV2::LoadBalancer\"",
+    "Properties:",
+    "  LoadBalancerAttributes:",
+    "    - LoadBalancerAttributes",
+    "  Name: String",
+    "  Scheme: String",
+    "  SecurityGroups:",
+    "    - String",
+    "  Subnets:",
+    "    - String",
+    "  Tags:",
+    "    - Resource Tag",
+    ""
+    ],
+    "description": ""
+  },
+  "ElasticLoadBalancingV2-TargetGroup": {
+    "prefix": "ElasticLoadBalancingV2-TargetGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html",
+      "Type: \"AWS::ElasticLoadBalancingV2::TargetGroup\"",
+    "Properties:",
+    "  HealthCheckIntervalSeconds: Integer",
+    "  HealthCheckPath: String",
+    "  HealthCheckPort: String",
+    "  HealthCheckProtocol: String",
+    "  HealthCheckTimeoutSeconds: Integer",
+    "  HealthyThresholdCount: Integer",
+    "  Matcher: Matcher",
+    "  Name: String",
+    "  Port: Integer",
+    "  Protocol: String",
+    "  Tags:",
+    "    - Resource Tag",
+    "  TargetGroupAttributes:",
+    "    - TargetGroupAttributes",
+    "  TargetGroupFullName: String",
+    "  Targets:",
+    "    - TargetDescription",
+    "  UnhealthyThresholdCount: Integer",
+    "  VpcId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Elasticsearch-Domain": {
+    "prefix": "Elasticsearch-Domain",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html",
+      "Type: \"AWS::Elasticsearch::Domain\"",
+    "Properties: ",
+    "  AccessPolicies: JSON object",
+    "  AdvancedOptions:",
+    "    Advanced Options",
+    "  DomainName: String",
+    "  EBSOptions:",
+    "    EBS Options",
+    "  ElasticsearchClusterConfig:",
+    "    Elasticsearch Cluster Config",
+    "  ElasticsearchVersion: String",
+    "  SnapshotOptions:",
+    "    Snapshot Options",
+    "  Tags:",
+    "    - Resource Tag",
+    ""
+    ],
+    "description": ""
+  },
+  "EMR-Cluster": {
+    "prefix": "EMR-Cluster",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html",
+      "Type: \"AWS::EMR::Cluster\"",
+    "Properties: ",
+    "  AdditionalInfo: JSON object",
+    "  Applications:",
+    "    - Applications",
+    "  BootstrapActions:",
+    "    - Bootstrap Actions",
+    "  Configurations:",
+    "    - Configurations",
+    "  Instances:",
+    "    JobFlowInstancesConfig",
+    "  JobFlowRole: String",
+    "  LogUri: String",
+    "  Name: String",
+    "  ReleaseLabel: String",
+    "  ServiceRole: String",
+    "  Tags:",
+    "    - Resource Tag",
+    "  VisibleToAllUsers: Boolean",
+    ""
+    ],
+    "description": ""
+  },
+  "EMR-InstanceGroupConfig": {
+    "prefix": "EMR-InstanceGroupConfig",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html",
+      "Type: \"AWS::EMR::InstanceGroupConfig\"",
+    "Properties: ",
+    "  BidPrice: String",
+    "  Configurations:",
+    "    - Configuration",
+    "  EbsConfiguration\" : EBSConfiguration",
+    "  InstanceCount\" : Integer",
+    "  InstanceRole\" : String",
+    "  InstanceType\" : String",
+    "  JobFlowId\": String",
+    "  Market\" : String",
+    "  Name\" : String",
+    ""
+    ],
+    "description": ""
+  },
+  "EMR-Step": {
+    "prefix": "EMR-Step",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html",
+      "Type: \"AWS::EMR::Step\"",
+    "Properties: ",
+    "  ActionOnFailure: String",
+    "  HadoopJarStep:",
+    "    HadoopJarStepConfig",
+    "  JobFlowId: String",
+    "  Name: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Events-Rule": {
+    "prefix": "Events-Rule",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html",
+      "Type: \"AWS::Events::Rule\"",
+    "Properties: ",
+    "  Description: String",
+    "  EventPattern: JSON object",
+    "  Name: String",
+    "  RoleArn: String",
+    "  ScheduleExpression: String",
+    "  State: String",
+    "  Targets:",
+    "    - Target",
+    ""
+    ],
+    "description": ""
+  },
+  "GameLift-Alias": {
+    "prefix": "GameLift-Alias",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html",
+      "Type: \"AWS::GameLift::Alias\"",
+    "Properties: ",
+    "  Name: String",
+    "  Description: String",
+    "  RoutingStrategy:",
+    "    RoutingStrategy",
+    ""
+    ],
+    "description": ""
+  },
+  "GameLift-Build": {
+    "prefix": "GameLift-Build",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html",
+      "Type: \"AWS::GameLift::Build\"",
+    "Properties: ",
+    "  Name: String",
+    "  StorageLocation:",
+    "    StorageLocation",
+    "  Version: String",
+    ""
+    ],
+    "description": ""
+  },
+  "GameLift-Fleet": {
+    "prefix": "GameLift-Fleet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html",
+      "Type: \"AWS::GameLift::Fleet\"",
+    "Properties: ",
+    "  BuildId: String",
+    "  Description: String",
+    "  DesiredEC2Instances: Integer",
+    "  EC2InboundPermissions:",
+    "    - EC2InboundPermission",
+    "  EC2InstanceType: String",
+    "  LogPaths:",
+    "    [ String, ... ]",
+    "  MaxSize: Integer",
+    "  MinSize: Integer",
+    "  Name: String",
+    "  ServerLaunchParameters: String",
+    "  ServerLaunchPath: String",
+    ""
+    ],
+    "description": ""
+  },
+  "IAM-AccessKey": {
+    "prefix": "IAM-AccessKey",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html",
+      "Type: \"AWS::IAM::AccessKey\"",
+    "Properties: ",
+    "  Serial\": Integer",
+    "  Status\": String",
+    "  UserName\": String",
+    ""
+    ],
+    "description": ""
+  },
+  "IAM-Group": {
+    "prefix": "IAM-Group",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html",
+      "Type: \"AWS::IAM::Group\"",
+    "Properties:",
+    "  GroupName: String",
+    "  ManagedPolicyArns: [ String, ... ]",
+    "  Path: String",
+    "  Policies:",
+    "    - Policies",
+    ""
+    ],
+    "description": ""
+  },
+  "IAM-InstanceProfile": {
+    "prefix": "IAM-InstanceProfile",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html",
+      "Type: \"AWS::IAM::InstanceProfile\"",
+    "Properties: ",
+    "  Path: String",
+    "  Roles:",
+    "    - IAM Roles ",
+    ""
+    ],
+    "description": ""
+  },
+  "IAM-ManagedPolicy": {
+    "prefix": "IAM-ManagedPolicy",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html",
+      "Type: \"AWS::IAM::ManagedPolicy\"",
+    "Properties: ",
+    "  Description: String",
+    "  Groups:",
+    "    - String",
+    "  Path: String",
+    "  PolicyDocument: JSON object",
+    "  Roles:",
+    "    - String",
+    "  Users:",
+    "    - String",
+    ""
+    ],
+    "description": ""
+  },
+  "IAM-Policy": {
+    "prefix": "IAM-Policy",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html",
+      "Type: \"AWS::IAM::Policy\"",
+    "Properties: ",
+    "  Groups:",
+    "    - String",
+    "  PolicyDocument: JSON object",
+    "  PolicyName: String",
+    "  Roles:",
+    "    - String",
+    "  Users:",
+    "    - String",
+    ""
+    ],
+    "description": ""
+  },
+  "IAM-Role": {
+    "prefix": "IAM-Role",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html",
+      "Type: \"AWS::IAM::Role\"",
+    "Properties: ",
+    "  AssumeRolePolicyDocument:",
+    "    JSON object",
+    "  ManagedPolicyArns:",
+    "    - String",
+    "  Path: String",
+    "  Policies:",
+    "    - Policies",
+    "  RoleName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "IAM-User": {
+    "prefix": "IAM-User",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html",
+      "Type: \"AWS::IAM::User\"",
+    "Properties: ",
+    "  Groups:",
+    "    - String",
+    "  LoginProfile:",
+    "    LoginProfile Type",
+    "  ManagedPolicyArns:",
+    "    - String",
+    "  Path: String",
+    "  Policies:",
+    "    - Policies",
+    "  UserName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "IAM-UserToGroupAddition": {
+    "prefix": "IAM-UserToGroupAddition",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html",
+      "Type: \"AWS::IAM::UserToGroupAddition\"",
+    "Properties: ",
+    "  GroupName: String",
+    "  Users:",
+    "    - User1 ",
+    ""
+    ],
+    "description": ""
+  },
+  "IoT-Certificate": {
+    "prefix": "IoT-Certificate",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html",
+      "Type: \"AWS::IoT::Certificate\"",
+    "  Properties:",
+    "    CertificateSigningRequest: String",
+    "    Status: String"
+    ],
+    "description": ""
+  },
+  "IoT-Policy": {
+    "prefix": "IoT-Policy",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html",
+      "Type: \"AWS::IoT::Policy\"",
+    "Properties:",
+    "  PolicyDocument: JSON object",
+    "  PolicyName: String"
+    ],
+    "description": ""
+  },
+  "IoT-PolicyPrincipalAttachment": {
+    "prefix": "IoT-PolicyPrincipalAttachment",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html",
+      "Type: \"AWS::IoT::PolicyPrincipalAttachment\"",
+    "  Properties:",
+    "    PolicyName: String",
+    "    Principal: String"
+    ],
+    "description": ""
+  },
+  "IoT-Thing": {
+    "prefix": "IoT-Thing",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html",
+      "Type: \"AWS::IoT::Thing\"",
+    "Properties:",
+    "  AttributePayload:",
+    "    - String:String",
+    "  ThingName: String"
+    ],
+    "description": ""
+  },
+  "IoT-ThingPrincipalAttachment": {
+    "prefix": "IoT-ThingPrincipalAttachment",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html",
+      "Type: \"AWS::IoT::PolicyPrincipalAttachment\"",
+    "Properties:",
+    "  Principal: String",
+    "  ThingName: String"
+    ],
+    "description": ""
+  },
+  "IoT-TopicRule": {
+    "prefix": "IoT-TopicRule",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html",
+      "Type: \"AWS::IoT::TopicRule\"",
+    "Properties:",
+    "  RuleName: String",
+    "  TopicRulePayload: TopicRulePayLoad"
+    ],
+    "description": ""
+  },
+  "Kinesis-Stream": {
+    "prefix": "Kinesis-Stream",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html",
+      "Type: \"AWS::Kinesis::Stream\"",
+    "Properties: ",
+    "  Name: String",
+    "  ShardCount: Integer",
+    "  Tags:",
+    "    - Resource Tag ",
+    ""
+    ],
+    "description": ""
+  },
+  "KinesisFirehose-DeliveryStream": {
+    "prefix": "KinesisFirehose-DeliveryStream",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html",
+      "Type: \"AWS::KinesisFirehose::DeliveryStream\"",
+    "Properties: ",
+    "  DeliveryStreamName: String",
+    "  ElasticsearchDestinationConfiguration:",
+    "    ElasticsearchDestinationConfiguration",
+    "  RedshiftDestinationConfiguration:",
+    "    RedshiftDestinationConfiguration",
+    "  S3DestinationConfiguration:",
+    "    S3DestinationConfiguration",
+    ""
+    ],
+    "description": ""
+  },
+  "KMS-Alias": {
+    "prefix": "KMS-Alias",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html",
+      "Type: \"AWS::KMS::Alias\"",
+    "Properties:",
+    "  AliasName: String",
+    "  TargetKeyId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "KMS-Key": {
+    "prefix": "KMS-Key",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html",
+      "Type: \"AWS::KMS::Key\"",
+    "Properties: ",
+    "  Description: String",
+    "  Enabled: Boolean",
+    "  EnableKeyRotation: Boolean",
+    "  KeyPolicy: JSON object",
+    ""
+    ],
+    "description": ""
+  },
+  "Lambda-EventSourceMapping": {
+    "prefix": "Lambda-EventSourceMapping",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html",
+      "Type: \"AWS::Lambda::EventSourceMapping\"",
+    "Properties: ",
+    "  BatchSize: Integer",
+    "  Enabled: Boolean",
+    "  EventSourceArn: String",
+    "  FunctionName: String",
+    "  StartingPosition: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Lambda-Alias": {
+    "prefix": "Lambda-Alias",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html",
+      "Type: \"AWS::Lambda::Alias\"",
+    "Properties:     ",
+    "  Description: String         ",
+    "  FunctionName: String",
+    "  FunctionVersion: String",
+    "  Name: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Lambda-Function": {
+    "prefix": "Lambda-Function",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html",
+      "Type: \"AWS::Lambda::Function\"",
+    "Properties: ",
+    "  Code:",
+    "    Code",
+    "  Description: String",
+    "  Environment:",
+    "    Environment",
+    "  FunctionName: String",
+    "  Handler: String",
+    "  KmsKeyArn: String",
+    "  MemorySize: Integer",
+    "  Role: String",
+    "  Runtime: String",
+    "  Timeout: Integer",
+    "  VpcConfig:",
+    "    VPCConfig",
+    ""
+    ],
+    "description": ""
+  },
+  "Lambda-Permission": {
+    "prefix": "Lambda-Permission",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html",
+      "Type: \"AWS::Lambda::Permission\"",
+    "Properties: ",
+    "  Action: String",
+    "  FunctionName: String",
+    "  Principal: String",
+    "  SourceAccount: String",
+    "  SourceArn: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Lambda-Version": {
+    "prefix": "Lambda-Version",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html",
+      "Type: \"AWS::Lambda::Version\"",
+    "Properties:     ",
+    "  CodeSha256\" : String",
+    "  Description\" : String         ",
+    "  FunctionName\" : String",
+    ""
+    ],
+    "description": ""
+  },
+  "Logs-Destination": {
+    "prefix": "Logs-Destination",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html",
+      "Type: \"AWS::Logs::Destination\"",
+    "Properties: ",
+    "  DestinationName: String",
+    "  DestinationPolicy: String",
+    "  RoleArn: String",
+    "  TargetArn: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Logs-LogGroup": {
+    "prefix": "Logs-LogGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html",
+      "Type: \"AWS::Logs::LogGroup\"",
+    "Properties: ",
+    "  LogGroupName: String",
+    "  RetentionInDays: Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "Logs-LogStream": {
+    "prefix": "Logs-LogStream",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html",
+      "Type: \"AWS::Logs::LogStream\"",
+    "Properties: ",
+    "  LogGroupName: String",
+    "  LogStreamName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Logs-MetricFilter": {
+    "prefix": "Logs-MetricFilter",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html",
+      "Type: \"AWS::Logs::MetricFilter\"",
+    "Properties: ",
+    "  FilterPattern: String",
+    "  LogGroupName: String",
+    "  MetricTransformations:",
+    "    MetricTransformations",
+    ""
+    ],
+    "description": ""
+  },
+  "Logs-SubscriptionFilter": {
+    "prefix": "Logs-SubscriptionFilter",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html",
+      "Type: \"AWS::Logs::SubscriptionFilter\"",
+    "Properties: ",
+    "  DestinationArn: String",
+    "  FilterPattern: String",
+    "  LogGroupName: String",
+    "  RoleArn: String",
+    ""
+    ],
+    "description": ""
+  },
+  "OpsWorks-App": {
+    "prefix": "OpsWorks-App",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html",
+      "Type: \"AWS::OpsWorks::App\"",
+    "Properties: ",
+    "  AppSource:",
+    "    Source",
+    "  Attributes:",
+    "    String: String",
+    "  Description: String",
+    "  DataSources: ",
+    "    - DataSource",
+    "  Domains:",
+    "    - String",
+    "  EnableSsl: Boolean",
+    "  Environment:",
+    "    - Environment",
+    "  Name: String",
+    "  Shortname: String",
+    "  SslConfiguration:",
+    "    SslConfiguration",
+    "  StackId: String",
+    "  Type: String",
+    ""
+    ],
+    "description": ""
+  },
+  "OpsWorks-ElasticLoadBalancerAttachment": {
+    "prefix": "OpsWorks-ElasticLoadBalancerAttachment",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html",
+      "Type: \"AWS::OpsWorks::ElasticLoadBalancerAttachment\"",
+    "Properties: ",
+    "  ElasticLoadBalancerName: String",
+    "  LayerId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "OpsWorks-Instance": {
+    "prefix": "OpsWorks-Instance",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html",
+      "Type: \"AWS::OpsWorks::Instance\"",
+    "Properties:",
+    "AgentVersion: String",
+    "  AmiId: String",
+    "  Architecture: String",
+    "  AutoScalingType: String",
+    "  AvailabilityZone: String",
+    "  BlockDeviceMappings: ",
+    "  - BlockDeviceMapping",
+    "  EbsOptimized: Boolean",
+    "  ElasticIps: ",
+    "  - String",
+    "  Hostname: String",
+    "  InstallUpdatesOnBoot: Boolean",
+    "  InstanceType: String",
+    "  LayerIds: ",
+    "  - String",
+    "  Os: String",
+    "  RootDeviceType: String",
+    "  SshKeyName: String",
+    "  StackId: String",
+    "  SubnetId: String",
+    "  Tenancy: String",
+    "  TimeBasedAutoScaling:",
+    "  TimeBasedAutoScaling",
+    "  VirtualizationType: String",
+    "  Volumes: ",
+    "  - String",
+    ""
+    ],
+    "description": ""
+  },
+  "OpsWorks-Layer": {
+    "prefix": "OpsWorks-Layer",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html",
+      "Type: \"AWS::OpsWorks::Layer\"",
+    "Properties:",
+    "  Attributes:",
+    "    String:String",
+    "  AutoAssignElasticIps: Boolean",
+    "  AutoAssignPublicIps: Boolean",
+    "  CustomInstanceProfileArn: String",
+    "  CustomRecipes:",
+    "    Recipes",
+    "  CustomJson:",
+    "    JSON object",
+    "  CustomSecurityGroupIds:",
+    "    - String",
+    "  EnableAutoHealing: Boolean",
+    "  InstallUpdatesOnBoot: Boolean",
+    "  LifecycleEventConfiguration:",
+    "    LifeCycleEventConfiguration",
+    "  LoadBasedAutoScaling:",
+    "    LoadBasedAutoScaling",
+    "  Name: String",
+    "  Packages:",
+    "    - String",
+    "  Shortname: String",
+    "  StackId: String",
+    "  Type: String",
+    "  VolumeConfigurations:",
+    "    - VolumeConfiguration ",
+    ""
+    ],
+    "description": ""
+  },
+  "OpsWorks-Stack": {
+    "prefix": "OpsWorks-Stack",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html",
+      "Type: \"AWS::OpsWorks::Stack\"",
+    "Properties: ",
+    "  AgentVersion: String",
+    "  Attributes:",
+    "    String:String",
+    "  ChefConfiguration:",
+    "    ChefConfiguration",
+    "  CloneAppIds: ",
+    "  - String",
+    "  ClonePermissions: Boolean",
+    "  ConfigurationManager:",
+    "    StackConfigurationManager",
+    "  CustomCookbooksSource:",
+    "    Source",
+    "  CustomJson: JSON",
+    "  DefaultAvailabilityZone: String",
+    "  DefaultInstanceProfileArn: String",
+    "  DefaultOs: String",
+    "  DefaultRootDeviceType: String",
+    "  DefaultSshKeyName: String",
+    "  DefaultSubnetId: String",
+    "  EcsClusterArn: String",
+    "  ElasticIps: ",
+    "  - ElasticIp",
+    "  HostnameTheme: String",
+    "  Name: String",
+    "  RdsDbInstances: ",
+    "  - RdsDbInstance",
+    "  ServiceRoleArn: String",
+    "  SourceStackId: String",
+    "  UseCustomCookbooks: Boolean",
+    "  UseOpsworksSecurityGroups: Boolean",
+    "  VpcId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "OpsWorks-UserProfile": {
+    "prefix": "OpsWorks-UserProfile",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html",
+      "Type: \"AWS::OpsWorks::UserProfile\"",
+    "Properties:",
+    "  AllowSelfManagement: Boolean",
+    "  IamUserArn: String",
+    "  SshPublicKey: String",
+    ""
+    ],
+    "description": ""
+  },
+  "OpsWorks-Volume": {
+    "prefix": "OpsWorks-Volume",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html",
+      "Type: \"AWS::OpsWorks::Volume\"",
+    "Properties:",
+    "  Ec2VolumeId: String",
+    "  MountPoint: String",
+    "  Name: String",
+    "  StackId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "RDS-DBCluster": {
+    "prefix": "RDS-DBCluster",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html",
+      "Type: \"AWS::RDS::DBCluster\"",
+    "Properties:",
+    "  AvailabilityZones:",
+    "    - String",
+    "  BackupRetentionPeriod: Integer",
+    "  DatabaseName: String",
+    "  DBClusterParameterGroupName: String",
+    "  DBSubnetGroupName: String",
+    "  Engine: String",
+    "  EngineVersion: String",
+    "  KmsKeyId: String",
+    "  MasterUsername: String",
+    "  MasterUserPassword: String",
+    "  Port: Integer",
+    "  PreferredBackupWindow: String",
+    "  PreferredMaintenanceWindow: String",
+    "  SnapshotIdentifier: String",
+    "  StorageEncrypted: Boolean",
+    "  Tags:",
+    "    Resource Tag",
+    "  VpcSecurityGroupIds:",
+    "    - String",
+    ""
+    ],
+    "description": ""
+  },
+  "RDS-DBClusterParameterGroup": {
+    "prefix": "RDS-DBClusterParameterGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html",
+      "Type: \"AWS::RDS::DBClusterParameterGroup\"",
+    "Properties: ",
+    "  Description: String",
+    "  Family: String",
+    "  Parameters: DBParameters",
+    "  Tags:",
+    "    Resource Tag ",
+    ""
+    ],
+    "description": ""
+  },
+  "RDS-DBInstance": {
+    "prefix": "RDS-DBInstance",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html",
+      "Type: \"AWS::RDS::DBInstance\"",
+    "Properties:",
+    "  AllocatedStorage: String",
+    "  AllowMajorVersionUpgrade: Boolean",
+    "  AutoMinorVersionUpgrade: Boolean",
+    "  AvailabilityZone: String",
+    "  BackupRetentionPeriod: String",
+    "  CharacterSetName: String",
+    "  CopyTagsToSnapshot: Boolean",
+    "  DBClusterIdentifier: String",
+    "  DBInstanceClass: String",
+    "  DBInstanceIdentifier: String",
+    "  DBName: String",
+    "  DBParameterGroupName: String",
+    "  DBSecurityGroups:",
+    "    - String",
+    "  DBSnapshotIdentifier: String",
+    "  DBSubnetGroupName: String",
+    "  Domain: String",
+    "  DomainIAMRoleName: String",
+    "  Engine: String",
+    "  EngineVersion: String",
+    "  Iops: Number",
+    "  KmsKeyId: String",
+    "  LicenseModel: String",
+    "  MasterUsername: String",
+    "  MasterUserPassword: String",
+    "  MonitoringInterval: Integer",
+    "  MonitoringRoleArn: String",
+    "  MultiAZ: Boolean",
+    "  OptionGroupName: String",
+    "  Port: String",
+    "  PreferredBackupWindow: String",
+    "  PreferredMaintenanceWindow: String",
+    "  PubliclyAccessible: Boolean",
+    "  SourceDBInstanceIdentifier: String",
+    "  StorageEncrypted: Boolean",
+    "  StorageType: String",
+    "  Tags:",
+    "    Resource Tag",
+    "  Timezone: String",
+    "  VPCSecurityGroups:",
+    "    - String",
+    ""
+    ],
+    "description": ""
+  },
+  "RDS-DBParameterGroup": {
+    "prefix": "RDS-DBParameterGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html",
+      "Type: \"AWS::RDS::DBParameterGroup\"",
+    "Properties: ",
+    "  Description: String",
+    "  Family: String",
+    "  Parameters:",
+    "    DBParameters",
+    "  Tags:",
+    "    - Resource Tag ",
+    ""
+    ],
+    "description": ""
+  },
+  "RDS-DBSecurityGroup": {
+    "prefix": "RDS-DBSecurityGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html",
+      "Type: \"AWS::RDS::DBSecurityGroup\"",
+    "Properties:",
+    "  EC2VpcId: String",
+    "  DBSecurityGroupIngress:",
+    "    - RDS Security Group Rule",
+    "  GroupDescription: String",
+    "  Tags:",
+    "    - Resource Tag ",
+    " "
+    ],
+    "description": ""
+  },
+  "RDS-DBSecurityGroupIngress": {
+    "prefix": "RDS-DBSecurityGroupIngress",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html",
+      "Type: \"AWS::RDS::DBSecurityGroupIngress\"",
+    "Properties:  ",
+    "  CIDRIP: String",
+    "  DBSecurityGroupName: String",
+    "  EC2SecurityGroupId: String",
+    "  EC2SecurityGroupName: String",
+    "  EC2SecurityGroupOwnerId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "RDS-DBSubnetGroup": {
+    "prefix": "RDS-DBSubnetGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html",
+      "Type: \"AWS::RDS::DBSubnetGroup\"",
+    "Properties: ",
+    "  DBSubnetGroupDescription: String",
+    "  SubnetIds:",
+    "    - String",
+    "  Tags:",
+    "    - Resource Tag ",
+    ""
+    ],
+    "description": ""
+  },
+  "RDS-EventSubscription": {
+    "prefix": "RDS-EventSubscription",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html",
+      "Type: \"AWS::RDS::EventSubscription\"",
+    "Properties: ",
+    "  Enabled: Boolean",
+    "  EventCategories:",
+    "    - String",
+    "  SnsTopicArn: String",
+    "  SourceIds:",
+    "    - String",
+    "  SourceType: String",
+    ""
+    ],
+    "description": ""
+  },
+  "RDS-OptionGroup": {
+    "prefix": "RDS-OptionGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html",
+      "Type: \"AWS::RDS::OptionGroup\"",
+    "Properties: ",
+    "  EngineName: String",
+    "  MajorEngineVersion: String",
+    "  OptionGroupDescription: String",
+    "  OptionConfigurations:",
+    "    - OptionConfigurations",
+    "  Tags:",
+    "    Resource Tag ",
+    ""
+    ],
+    "description": ""
+  },
+  "Redshift-Cluster": {
+    "prefix": "Redshift-Cluster",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html",
+      "Type: \"AWS::Redshift::Cluster\"",
+    "Properties: ",
+    "  AllowVersionUpgrade: Boolean",
+    "  AutomatedSnapshotRetentionPeriod: Integer",
+    "  AvailabilityZone: String",
+    "  ClusterParameterGroupName: String",
+    "  ClusterSecurityGroups:",
+    "    - String",
+    "  ClusterSubnetGroupName: String",
+    "  ClusterType: String",
+    "  ClusterVersion: String",
+    "  DBName: String",
+    "  ElasticIp: String",
+    "  Encrypted: Boolean",
+    "  HsmClientCertificateIdentifier: String",
+    "  HsmConfigurationIdentifier: String",
+    "  KmsKeyId: String",
+    "  MasterUsername: String",
+    "  MasterUserPassword: String",
+    "  NodeType: String",
+    "  NumberOfNodes: Integer",
+    "  OwnerAccount: String",
+    "  Port: Integer",
+    "  PreferredMaintenanceWindow: String",
+    "  PubliclyAccessible: Boolean",
+    "  SnapshotClusterIdentifier: String",
+    "  SnapshotIdentifier: String",
+    "  VpcSecurityGroupIds:",
+    "    - String",
+    ""
+    ],
+    "description": ""
+  },
+  "Redshift-ClusterParameterGroup": {
+    "prefix": "Redshift-ClusterParameterGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html",
+      "Type: \"AWS::Redshift::ClusterParameterGroup\"",
+    "Properties: ",
+    "  Description: String",
+    "  ParameterGroupFamily: String",
+    "  Parameters:",
+    "    - Parameter ",
+    ""
+    ],
+    "description": ""
+  },
+  "Redshift-ClusterSecurityGroup": {
+    "prefix": "Redshift-ClusterSecurityGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html",
+      "Type: \"AWS::Redshift::ClusterSecurityGroup\"",
+    "Properties: ",
+    "  Description: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Redshift-ClusterSecurityGroupIngress": {
+    "prefix": "Redshift-ClusterSecurityGroupIngress",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html",
+      "Type: \"AWS::Redshift::ClusterSecurityGroupIngress\"",
+    "Properties: ",
+    "  ClusterSecurityGroupName: String",
+    "  CIDRIP: String",
+    "  EC2SecurityGroupName: String",
+    "  EC2SecurityGroupOwnerId: String",
+    ""
+    ],
+    "description": ""
+  },
+  "Redshift-ClusterSubnetGroup": {
+    "prefix": "Redshift-ClusterSubnetGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html",
+      "Type: \"AWS::Redshift::ClusterSubnetGroup\"",
+    "Properties: ",
+    "  Description: String",
+    "  SubnetIds:",
+    "    - String ",
+    ""
+    ],
+    "description": ""
+  },
+  "Route53-HealthCheck": {
+    "prefix": "Route53-HealthCheck",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html",
+      "Type: \"AWS::Route53::HealthCheck\"",
+    "Properties: ",
+    "  HealthCheckConfig:",
+    "    HealthCheckConfig",
+    "  HealthCheckTags:",
+    "    - HealthCheckTags ",
+    ""
+    ],
+    "description": ""
+  },
+  "Route53-HostedZone": {
+    "prefix": "Route53-HostedZone",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html",
+      "Type: \"AWS::Route53::HostedZone\"",
+    "Properties: ",
+    "  HostedZoneConfig:",
+    "    HostedZoneConfig",
+    "  HostedZoneTags:",
+    "    -  HostedZoneTags",
+    "  Name: String",
+    "  VPCs:",
+    "    - HostedZoneVPCs ",
+    ""
+    ],
+    "description": ""
+  },
+  "Route53-RecordSet": {
+    "prefix": "Route53-RecordSet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html",
+      "Type: \"AWS::Route53::RecordSet\"",
+    "Properties: ",
+    "  AliasTarget: AliasTarget",
+    "  Comment: String",
+    "  Failover: String",
+    "  GeoLocation:",
+    "    GeoLocation",
+    "  HealthCheckId: String",
+    "  HostedZoneId: String",
+    "  HostedZoneName: String",
+    "  Name: String",
+    "  Region: String",
+    "  ResourceRecords:",
+    "    - String",
+    "  SetIdentifier: String",
+    "  TTL: String",
+    "  Type: String",
+    "  Weight: Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "Route53-RecordSetGroup": {
+    "prefix": "Route53-RecordSetGroup",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup.html",
+      "Type: \"AWS::Route53::RecordSetGroup\"",
+    "Properties: ",
+    "  Comment: String",
+    "  HostedZoneId: String",
+    "  HostedZoneName: String",
+    "  RecordSets:",
+    "    - RecordSet1 ",
+    ""
+    ],
+    "description": ""
+  },
+  "S3-Bucket": {
+    "prefix": "S3-Bucket",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html",
+      "Type: \"AWS::S3::Bucket\"",
+    "Properties: ",
+    "  AccessControl: String",
+    "  BucketName: String",
+    "  CorsConfiguration:",
+    "    CORS Configuration",
+    "  LifecycleConfiguration:",
+    "    Lifecycle Configuration",
+    "  LoggingConfiguration:",
+    "    Logging Configuration",
+    "  NotificationConfiguration:",
+    "    Notification Configuration",
+    "  ReplicationConfiguration:",
+    "    Replication Configuration",
+    "  Tags:",
+    "    - Resource Tag",
+    "  VersioningConfiguration:",
+    "    Versioning Configuration",
+    "  WebsiteConfiguration:",
+    "    Website Configuration Type",
+    ""
+    ],
+    "description": ""
+  },
+  "S3-BucketPolicy": {
+    "prefix": "S3-BucketPolicy",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html",
+      "Type: \"AWS::S3::BucketPolicy\"",
+    "Properties: ",
+    "  Bucket: String",
+    "  PolicyDocument: JSON",
+    ""
+    ],
+    "description": ""
+  },
+  "SDB-Domain": {
+    "prefix": "SDB-Domain",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-simpledb.html",
+      "Type: \"AWS::SDB::Domain\"",
+    "Properties: ",
+    "  Description: String"
+    ],
+    "description": ""
+  },
+  "SNS-Subscription": {
+    "prefix": "SNS-Subscription",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html",
+      "Type: \"AWS::SNS::Subscription\"",
+    "Properties:",
+    "  Endpoint: String",
+    "  Protocol: String",
+    "  TopicArn: String",
+    ""
+    ],
+    "description": ""
+  },
+  "SNS-Topic": {
+    "prefix": "SNS-Topic",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html",
+      "Type: \"AWS::SNS::Topic\"",
+    "Properties: ",
+    "  DisplayName: String",
+    "  Subscription:",
+    "    SNS Subscription",
+    "  TopicName: String",
+    ""
+    ],
+    "description": ""
+  },
+  "SNS-TopicPolicy": {
+    "prefix": "SNS-TopicPolicy",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html",
+      "Type: \"AWS::SNS::TopicPolicy\"",
+    "Properties:",
+    "  PolicyDocument: JSON",
+    "  Topics:",
+    "    - List of SNS topic ARNs ",
+    ""
+    ],
+    "description": ""
+  },
+  "SQS-Queue": {
+    "prefix": "SQS-Queue",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html",
+      "Type: \"AWS::SQS::Queue\"",
+    "Properties: ",
+    "  DelaySeconds: Integer",
+    "  MaximumMessageSize: Integer",
+    "  MessageRetentionPeriod: Integer",
+    "  QueueName: String",
+    "  ReceiveMessageWaitTimeSeconds: Integer",
+    "  RedrivePolicy:",
+    "    RedrivePolicy",
+    "  VisibilityTimeout: Integer",
+    ""
+    ],
+    "description": ""
+  },
+  "SQS-QueuePolicy": {
+    "prefix": "SQS-QueuePolicy",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html",
+      "Type: \"AWS::SQS::QueuePolicy\"",
+    "Properties: ",
+    "  PolicyDocument: JSON",
+    "  Queues:",
+    "    - String ",
+    ""
+    ],
+    "description": ""
+  },
+  "SSM-Association": {
+    "prefix": "SSM-Association",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html",
+      "Type: \"AWS::SSM::Association\"",
+    "Properties: ",
+    "  DocumentVersion: String",
+    "  InstanceId: String",
+    "  Name: String",
+    "  Parameters:",
+    "    String:",
+    "      - String",
+    "  ScheduleExpression: String",
+    "  Targets:",
+    "    - Targets",
+    ""
+    ],
+    "description": ""
+  },
+  "SSM-Document": {
+    "prefix": "SSM-Document",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html",
+      "Type: \"AWS::SSM::Document\"",
+    "Properties: ",
+    "  Content: JSON object",
+    "  DocumentType: String",
+    ""
+    ],
+    "description": ""
+  },
+  "WAF-ByteMatchSet": {
+    "prefix": "WAF-ByteMatchSet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html",
+      "Type: \"AWS::WAF::ByteMatchSet\"",
+    "Properties: ",
+    "  ByteMatchTuples:",
+    "    - Byte match tuple",
+    "  Name: String",
+    ""
+    ],
+    "description": ""
+  },
+  "WAF-IPSet": {
+    "prefix": "WAF-IPSet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-ipset.html",
+      "Type: \"AWS::WAF::IPSet\"",
+    "Properties: ",
+    "  IPSetDescriptors:",
+    "    - IPSet descriptor",
+    "  Name: String",
+    ""
+    ],
+    "description": ""
+  },
+  "WAF-Rule": {
+    "prefix": "WAF-Rule",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-rule.html",
+      "Type: \"AWS::WAF::Rule\"",
+    "Properties: ",
+    "  MetricName: String",
+    "  Name: String",
+    "  Predicates:",
+    "    - Predicate ",
+    ""
+    ],
+    "description": ""
+  },
+  "WAF-SizeConstraintSet": {
+    "prefix": "WAF-SizeConstraintSet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html",
+      "Type: \"AWS::WAF::SizeConstraintSet\"",
+    "Properties: ",
+    "  Name: String",
+    "  SizeConstraints:",
+    "    - SizeConstraint ",
+    ""
+    ],
+    "description": ""
+  },
+  "WAF-SqlInjectionMatchSet": {
+    "prefix": "WAF-SqlInjectionMatchSet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sqlinjectionmatchset.html",
+      "Type: \"AWS::WAF::SqlInjectionMatchSet\"",
+    "Properties: ",
+    "  Name: String",
+    "  SqlInjectionMatchTuples:",
+    "    - SqlInjectionMatchTuple ",
+    ""
+    ],
+    "description": ""
+  },
+  "WAF-WebACL": {
+    "prefix": "WAF-WebACL",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html",
+      "Type: \"AWS::WAF::WebACL\"",
+    "Properties: ",
+    "  DefaultAction:",
+    "    Action",
+    "  MetricName: String",
+    "  Name: String",
+    "  Rules:",
+    "    - Rule ",
+    ""
+    ],
+    "description": ""
+  },
+  "WAF-XssMatchSet": {
+    "prefix": "WAF-XssMatchSet",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-xssmatchset.html",
+      "Type: \"AWS::WAF::XssMatchSet\"",
+    "Properties: ",
+    "  Name: String",
+    "  XssMatchTuples:",
+    "    - XssMatchTuple ",
+    ""
+    ],
+    "description": ""
+  },
+  "WorkSpaces-Workspace": {
+    "prefix": "WorkSpaces-Workspace",
+    "body": [
+      "#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html",
+      "Type: \"AWS::WorkSpaces::Workspace\"",
+    "Properties: ",
+    "  BundleId: String",
+    "  DirectoryId: String",
+    "  UserName: String",
+    "  RootVolumeEncryptionEnabled: Boolean",
+    "  UserVolumeEncryptionEnabled: Boolean",
+    "  VolumeEncryptionKey: String",
+    ""
+    ],
+    "description": ""
+  }
+}
